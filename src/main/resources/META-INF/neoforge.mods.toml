@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "gazelarena"
+version = "1.0.0"
+displayName = "Gazel Arena"
+authors = "Gazel Arena"
+description = '''
+Fuege den Befehl /gazel hinzu: teleportiert in einen Thronsaal und startet den Bosskampf
+gegen Gazel Dwargo aus Tensura: Reincarnated. Nach Sieg oder Niederlage wird die Arena zurueckgesetzt.
+'''
+
+[[dependencies.gazelarena]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.gazelarena]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"
+
+# Tensura ist nur eine weiche Abhaengigkeit: Der Boss wird zur Laufzeit ueber die Registry gesucht.
+[[dependencies.gazelarena]]
+modId = "tensura"
+type = "optional"
+versionRange = "[0,)"
+ordering = "AFTER"
+side = "BOTH"
